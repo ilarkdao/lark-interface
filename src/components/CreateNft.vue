@@ -242,8 +242,8 @@
 									if(req.success === true) {
 										await this.sleep()
 										await this.sleep()
-										this.$router.go(0)
 										this.$router.push({path: '/'})
+										this.$router.go(0)
 									}	else{
 										this.showMask = true
 										this.successFlag = false
