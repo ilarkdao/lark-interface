@@ -243,8 +243,9 @@
 									if(req.success === true) {
 										await this.sleep()
 										await this.sleep()
+										this.$store.state.photoCreated = []
 										this.$router.push({path: '/photograph'})
-										this.$router.go(0)
+										// this.$router.go(0)
 									}	else{
 										this.showMask = true
 										this.successFlag = false

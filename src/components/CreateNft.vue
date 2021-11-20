@@ -242,8 +242,9 @@
 									if(req.success === true) {
 										await this.sleep()
 										await this.sleep()
+										this.$store.state.created = []
 										this.$router.push({path: '/'})
-										this.$router.go(0)
+										// this.$router.go(0)
 									}	else{
 										this.showMask = true
 										this.successFlag = false
