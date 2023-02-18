@@ -67,7 +67,8 @@ if (typeof window.ethereum !== 'undefined'){
   web3 = new Web3(window.ethereum)
 
   // let url = "https://polygon-mumbai.infura.io/v3/c7200e255f2d4f68bad9d2ca077720b1"
-  let url = "https://polygon-rpc.com"
+  // let url = "https://polygon-rpc.com"
+	let url = "https://polygon-mainnet.g.alchemy.com/v2/ndchSueVG4PL0kyzu6FrYzEy4YEQvThs"
   let web3Provider2 = new Web3.providers.HttpProvider(url)
   web4 = new Web3(web3Provider2)
 
@@ -89,14 +90,17 @@ let vcPoolToken = "0x385DcAF2543bA9f74CCF2b8fD42C37E138C08e7d"
 let lpToken = "0xf6d625e6168f8b3cd96cbf3b8a32bece38d0775a"  //DAI-LARK
 let larkArtNFT = "0xA338108f5Cac545f1E9E4De1E97D745434104bc7"
 let larkPhotoNFT = "0x8148127575a4f1B8587BbDc0cefaa64c1af25D4e"
-let mintFee = 50
+let mintFee = 50   //LARK
+
+let openseaLink = "https://opensea.io/assets/matic/"+larkArtNFT+'/'
+let openseaPhotoLink = "https://opensea.io/assets/matic/"+larkPhotoNFT+'/'
 
 let addGas = 5e9  //5 GWei
 
 let delegatee = "ilark"
 
 
-// import {timeFormat} from "./utils/timeFormat"
+import {timeFormat} from "./utils/timeFormat"
 // import {formatSeconds} from "./utils/formatSeconds"
 import {sleep} from "./utils/sleep"  
 import {getstr} from "./utils/getstr"
@@ -112,7 +116,7 @@ import {getLarkInstance} from "./utils/token/getLarkInstance"
 import {getArtInstance} from "./utils/art/getArtInstance" 
 
 
-// Vue.prototype.timeFormat = timeFormat
+Vue.prototype.timeFormat = timeFormat
 // Vue.prototype.formatSeconds = formatSeconds
 Vue.prototype.web3 = web3
 Vue.prototype.web4 = web4
@@ -136,8 +140,10 @@ Vue.prototype.daoPoolToken = daoPoolToken
 Vue.prototype.vcPoolToken= vcPoolToken
 Vue.prototype.larkPool = larkPool
 Vue.prototype.delegatedPool = delegatedPool
-Vue.prototype.larkArtNFT = larkArtNFT
-Vue.prototype.larkPhotoNFT = larkPhotoNFT
+Vue.prototype.larkArtNFT = larkArtNFT  
+Vue.prototype.openseaLink = openseaLink
+Vue.prototype.larkPhotoNFT = larkPhotoNFT 
+Vue.prototype.openseaPhotoLink = openseaPhotoLink
 Vue.prototype.addGas = addGas
 Vue.prototype.delegatee = delegatee
 Vue.prototype.axios = axios 

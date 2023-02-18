@@ -6,8 +6,8 @@ module.exports = {
 				
 				"bounty": "悬赏",
 				"staking": "质押",				
-				"nftWork": "艺术作品(Hive)",
-				"photoWork": "摄影作品(Hive)",
+				"nftWork": "艺术作品",
+				"photoWork": "摄影作品",
 				"post": "发布作品",
 				"postNft": "发布艺术作品",
 				"postPhotoNft": "发布摄影作品", 
@@ -25,12 +25,12 @@ module.exports = {
 				"postArtNft": "发布艺术NFT",
 				
 				"pools": "奖励池",
-        "delegatemine":"代理奖励",
+        "delegatemine":"HP代理奖励",
 				"farm": "SLP奖励",
 
         "hpBalance":"HP余额",
         "yourspdelegate":"您的HP代理量",
-        "delegatorList":"代理列表",
+        "delegatorList":"HP代理列表", 
 
         "hpTotaldelegate":"HP总代理量",
         "apy":"年化收益率",
@@ -79,7 +79,7 @@ module.exports = {
         "contract":"合约地址",
         "swap":"交易对",
         "tools":"常用工具",
-        "contact":"联系我们",
+        "contact":"联系",
         "docs":"文档",
         "about":"关于",
 

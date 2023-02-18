@@ -136,8 +136,7 @@
               let totalDelegatedHp = parseFloat(s[0].delegated_vesting_shares) / this.hpToVests
               this.balanceOfHp = (hp - totalDelegatedHp).toFixed(3)
 							this.loadingFlag = false
-
-              console.log(688, "delegatedHp", this.delegatedHp, parseFloat(res[0].vesting_shares))
+              // console.log(6882, "delegatedHp", this.delegatedHp, parseFloat(res[0].vesting_shares))
             },
             checkAddValue(){
                 let reg = /^\d+(\.\d+)?$/
@@ -183,10 +182,9 @@
                 let f = parseFloat(this.addvalue) + parseFloat(this.delegatedHp)
                 let b = f * this.hpToVests
                 let amount = b.toFixed(6)
-
-                let res = await this.hiveDelegate(user, this.delegatee, amount)
+                let res = await this.hiveDelegate(user, this.delegatee, amount)   
                 if(res.success === true) {
-                //代理成功才挖矿
+                //代理成功才挖矿   http://127.0.0.1:5200   https://app.ilark.io:5201/delegate
                 await this.sleep()
                 this.axios.request({
                   method: 'post',

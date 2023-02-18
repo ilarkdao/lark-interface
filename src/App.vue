@@ -64,7 +64,7 @@
 				          <b-dropdown id="dropdown-grouped" :text="this.$t('message.about')" variant="transparent" class="m-2">
 				
 				          <b-dropdown-item-button>
-				            <a target="_blank" href="#">{{ $t('message.docs') }}</a>
+				            <a target="_blank" href="https://doc.ilark.io">{{ $t('message.docs') }}</a>
 				          </b-dropdown-item-button>
 				           <b-dropdown-divider></b-dropdown-divider>
 				
@@ -82,15 +82,17 @@
 				          </b-dropdown-item-button>
 				          <b-dropdown-divider></b-dropdown-divider>
 				          <b-dropdown-item-button>
-				            <a target="_blank" href="https://discord.gg/p9KTdmVrfb">Discord</a>
+				            <router-link to="/contact">{{ $t('message.contact') }}</router-link>
 				          </b-dropdown-item-button>
 				
-				      <div v-if="$store.state.username">
-				          <b-dropdown-divider></b-dropdown-divider>
-				          <b-dropdown-item-button @click="logout" style="text-align:center">
-				            {{ $t('message.logout') }}
-				          </b-dropdown-item-button>
-				      </div>
+
+				          <div v-if="$store.state.username">
+											<b-dropdown-divider></b-dropdown-divider>
+											<b-dropdown-item-button @click="logout" style="text-align:center">
+												{{ $t('message.logout') }}
+											</b-dropdown-item-button>
+									</div>
+				 
 				        </b-dropdown>
 				    </div>
 				
@@ -105,7 +107,7 @@
 						<div v-if="devTeam.includes($store.state.addr)" style="margin-right: 0.5rem;">
 							<button class="right-item" @click="dev">Dev</button>
 						</div>
-            <!-- <button class="right-item" @click="slpfarm">{{ $t('message.farm') }}</button> -->
+            <button class="right-item" @click="slpfarm">{{ $t('message.farm') }}</button>
 						
             <div class="drop">
                 <b-dropdown id="dropdown-grouped" :text="this.$t('message.language')" variant="transparent" class="m-2">
@@ -123,12 +125,8 @@
               <div class="drop">
                   <b-dropdown id="dropdown-grouped" :text="this.$t('message.about')" variant="transparent" class="m-2">
 
-                   <!-- <b-dropdown-item-button @click="mywallet">
-                     <router-link to="/wallet">{{ $t('message.mywallet') }}</router-link>
-                  </b-dropdown-item-button> -->
-
                   <b-dropdown-item-button>
-                    <a target="_blank" href="#">{{ $t('message.docs') }}</a>
+                    <a target="_blank" href="https://doc.ilark.io">{{ $t('message.docs') }}</a>
                   </b-dropdown-item-button>
                    <b-dropdown-divider></b-dropdown-divider>
 
@@ -146,15 +144,15 @@
                   </b-dropdown-item-button>
                   <b-dropdown-divider></b-dropdown-divider>
                   <b-dropdown-item-button>
-                    <a target="_blank" href="https://discord.gg/p9KTdmVrfb">Discord</a>
+                    <router-link to="/contact">{{ $t('message.contact') }}</router-link>
                   </b-dropdown-item-button>
 
-              <div v-if="$store.state.username">
-                  <b-dropdown-divider></b-dropdown-divider>
-                  <b-dropdown-item-button @click="logout" style="text-align:center">
-                    {{ $t('message.logout') }}
-                  </b-dropdown-item-button>
-              </div>
+								<div v-if="$store.state.username">
+										<b-dropdown-divider></b-dropdown-divider>
+										<b-dropdown-item-button @click="logout" style="text-align:center">
+											{{ $t('message.logout') }}
+										</b-dropdown-item-button>
+								</div>
                 </b-dropdown>
             </div>
 

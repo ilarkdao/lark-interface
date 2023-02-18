@@ -7,6 +7,7 @@ const getArtInstance = async function(){
   let instance2 = new this.web4.eth.Contract(larkArt.abi, this.larkArtNFT)
   //将得到的数据存入vuex中
   this.$store.commit('saveArtInstance2', instance2)
+	// console.log(1234, instance2)
 	
 	//photoNft
 	let instancePhoto = new this.web3.eth.Contract(larkArt.abi, this.larkPhotoNFT)

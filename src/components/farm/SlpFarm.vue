@@ -1,13 +1,11 @@
 <template>
   <div class="wallet">
-
-   <div class="titleSelected notStart">DAI-LARK SLP 将于10.22开启！</div>
-	 <div v-if="false">
-<!-- <b-button block variant="outline-primary" @click="emergencyWithdraw">紧急退出</b-button> -->
+	 <div>
+		<!-- <b-button block variant="outline-primary" @click="emergencyWithdraw">紧急退出</b-button> -->
 
     <!--DAI-LARK代理挖矿-->
     <div class="delegate">
-      <p class="titleSelected"> DAI-LARK (test SLP)</p>
+      <p class="titleSelected"> DAI-LARK </p>
       <div class="delegatetext round-box">
           您的存量： {{ balanceOfDeposit }} SLP<br>
           SLP总存量： {{ balanceOfTotalLp }} SLP<br>
@@ -42,7 +40,7 @@
                         @click="letApprove"
                         :disabled="!approveFlag"
               >
-                授权
+                授权 
               </b-button>
               <b-button block variant="outline-primary"  @click="deposit" :disabled="!checkDelegateFlag || !isApprove">
                 确认存入
@@ -140,7 +138,7 @@
     name: "SlpFarm",
     data() {
       return {
-				poolId: 3,
+				poolId: 6,
         depositValue: '',
         balanceOfDeposit:'',
         balanceOfDeposit2:'',

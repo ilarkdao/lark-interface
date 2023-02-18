@@ -6,8 +6,8 @@ module.exports = {
 				
 				"bounty": "Bounty",
 				"staking": "Staking",
-				"nftWork": "Art Works(Hive)",
-				"photoWork": "Photograph(Hive)",
+				"nftWork": "Art Works",
+				"photoWork": "Photograph",
 				"post": "Post Nft",
 				"postNft": "Post Art Nft",
 				"postPhotoNft": "Post Photograph Nft", 
@@ -25,12 +25,12 @@ module.exports = {
 				"postArtNft": "Post Art NFT",
 				
 				"pools": "Pools",
-        "delegatemine":"Rewards by Delegation",
+        "delegatemine":"Rewards by HP Delegation",
 				"farm": "Farm",
 
         "hpBalance":"HP Balance",
         "yourspdelegate":"Your Delegated HP",
-        "delegatorList":"delegatorList",
+        "delegatorList":"HP delegatorList",
 
         "hpTotaldelegate":"Total Delegated HP",
          "apy":"APY",

@@ -297,27 +297,14 @@
 
       mounted() {
         let that = this
-        let instance = this.$store.state.photoInstance2
         async function main(){
-          if(Object.keys(instance).length === 0){
-            //如果刷新页面, instance未定义
-            // console.log(888, "instance为空，是刷新页面")
             await that.getArtInstance()
-						await that.getLarkInstance()
+        		await that.getLarkInstance()
             await that.getBalanceAndAllowance()
             that.isLoading = false
             that.flag = true
-          } else{
-						// console.log(444, "切换页面")
-						await that.getBalanceAndAllowance()
-            that.isLoading = false
-            that.flag = true
-          }
-
         }
         main()
-
-
       },
     }
 </script>
